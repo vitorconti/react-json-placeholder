@@ -1,15 +1,20 @@
-import {getUserById} from '../../services/userService'
-import {useEffect} from 'react'
+import {getPosts} from '../../services/postService'
+import {useEffect,useState} from 'react'
 export default function CardPosts() {
+  const [posts,setPosts] = useState([]);
   useEffect(() => {
-     async function loadUsuario (){
-      const user = await getUserById('1')
-      console.log(user.name)
+     async function loadData (){
+      const post = await getPosts()
+      console.log(post)
+      setPosts(post)
      }
-     loadUsuario();
+     loadData();
     return () => {
       
     }
   }, [])
-  return <div>AAAAAAAAAAAAAAAAAAAAAA</div>;
+  
+  return <div>{posts.map(post=> {
+    return <p key={post.id}>{post.title}</p>
+})}</div>;
 }
