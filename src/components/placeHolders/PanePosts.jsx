@@ -1,5 +1,6 @@
 import {getPosts} from '../../services/postService'
 import {useEffect,useState} from 'react'
+import PostExhibition from './exhibition/PostExhibition'
 export default function CardPosts() {
   const [posts,setPosts] = useState([]);
   useEffect(() => {
@@ -15,6 +16,6 @@ export default function CardPosts() {
   }, [])
   
   return <div>{posts.map(post=> {
-    return <p key={post.id}>{post.title}</p>
+    return <PostExhibition key={post.id}>{post}</PostExhibition>
 })}</div>;
 }

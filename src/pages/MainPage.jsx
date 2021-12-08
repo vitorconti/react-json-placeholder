@@ -1,10 +1,10 @@
 import NavBar from '../components/menu/NavBar';
 
 import { Routes, Route } from 'react-router-dom';
-import CardPosts from '../components/placeHolders/CardPosts';
-import CardAlbuns from '../components/placeHolders/CardAlbuns';
-import ToDo from '../components/placeHolders/ToDo';
-import HomePage from '../components/Home/HomePage';
+import PanePosts from '../components/placeHolders/PanePosts';
+import PaneAlbuns from '../components/placeHolders/PaneAlbuns';
+import PaneToDo from '../components/placeHolders/PaneToDo';
+import HomePage from '../components/home/HomePage';
 
 export default function MainPage() {
   return (
@@ -14,9 +14,9 @@ export default function MainPage() {
       <div>
         <Routes>
           <Route path='/' element = {<HomePage/>}/>
-          <Route path="posts" element={<CardPosts />} />
-          <Route path="albums" element={<CardAlbuns />} />
-          <Route path="todos" element={<ToDo />} />
+          <Route path="posts" element={<PanePosts />} />
+          <Route path="albums" element={<PaneAlbuns />} />
+          <Route path="todos" element={<PaneToDo />} />
         </Routes>
       </div>
     </>
