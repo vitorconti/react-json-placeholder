@@ -11,6 +11,7 @@ export async function fillUsersProperties(arrayToFill = []){
       item.userPhoto = iconPhotos[await getRandomInt(0,iconPhotos.length)]
       arrayFilled.push(item);
     }
+    return arrayFilled
   } catch (error) {
     throw error
   }
