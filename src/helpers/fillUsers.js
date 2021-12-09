@@ -4,7 +4,7 @@ import { getRandomInt } from "./mathHelper";
 export async function fillUsersProperties(arrayToFill = []){
   try {
     const arrayFilled = []
-    const iconPhotos  =['pi-facebook','pi-github','pi-twitter','pi-map','pi-youtube','pi-sun','pi-moon']
+    const iconPhotos  =['pi-facebook','pi-github','pi-twitter','pi-map','pi-youtube','pi-apple','pi-discord']
     for (let item of arrayToFill){
       const {name} = await getUserById(item.userId)
       item.userName = name
