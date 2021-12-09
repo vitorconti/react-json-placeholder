@@ -1,7 +1,7 @@
 import {getPosts} from '../../services/postService'
 import {useEffect,useState} from 'react'
 import PostExhibition from './exhibition/PostExhibition'
-export default function CardPosts() {
+export default function PanePosts() {
   const [posts,setPosts] = useState([]);
   useEffect(() => {
      async function loadData (){
