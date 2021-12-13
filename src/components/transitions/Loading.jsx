@@ -1,5 +1,5 @@
-import ClipLoader from 'react-spinners/ClipLoader';
-
 export default function Loading() {
-  return <ClipLoader />;
+  return (
+    <i className="m-2 pi pi-spin pi-spinner" style={{ fontSize: '5em' }}></i>
+  );
 }
